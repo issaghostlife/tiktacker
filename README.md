@@ -21,8 +21,6 @@
 
 ## Installation & Usage
 
-There are multiple ways to use Tiktacker.
-**Tampermonkey is recommended** because it auto-loads on TikTok.
 
 ---
 ## Method 1: Console Paste Full Script
