@@ -33,9 +33,8 @@ There are multiple ways to use Tiktacker.
 1. Install [Tampermonkey](https://www.tampermonkey.net/).
 2. Open this install link:
 
-```text
-[https://github.com/issaghostlife/tiktacker/raw/main/tiktacker.js
-](https://github.com/issaghostlife/tiktacker/raw/main/tiktacker.user.js)```
+
+https://github.com/issaghostlife/tiktacker/raw/main/tiktacker.user.js
 
 3. Tampermonkey will ask you to install the script.
 4. Go to TikTok.com.
@@ -56,7 +55,7 @@ Tiktacker
 Paste this as the bookmark URL:
 
 ```javascript
-javascript:(function(){var s=document.createElement('script');s.src='https://issaghostlife.github.io/tiktacker/loader.js';document.body.appendChild(s);})();
+javascript:(function(){var s=document.createElement('script');s.src='https://issaghostlife.github.io/tiktacker/bookmarklet.js?v='+Date.now();document.body.appendChild(s);})();
 ```
 
 ### How to Use
