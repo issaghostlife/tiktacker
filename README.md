@@ -34,8 +34,8 @@ There are multiple ways to use Tiktacker.
 2. Open this install link:
 
 ```text
-https://github.com/issaghostlife/tiktacker/raw/main/tiktacker.js
-```
+[https://github.com/issaghostlife/tiktacker/raw/main/tiktacker.js
+](https://github.com/issaghostlife/tiktacker/raw/main/tiktacker.user.js)```
 
 3. Tampermonkey will ask you to install the script.
 4. Go to TikTok.com.
