@@ -1,8 +1,9 @@
 # ⏹ Tiktacker
 
 > TikTok Unfollow Automation — Safe, configurable, one-click unfollow tool
-
-
+<p align="center">
+  <img src="assets/tiktakker-logo.png" alt="TikTakker Logo" width="900">
+</p>
 ## Features
 
 - 🎯 **One-click unfollow** — instant, no confirmation dialog
