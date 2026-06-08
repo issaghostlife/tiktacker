@@ -36,7 +36,7 @@ allow pasting
 ```
 
 6. Press Enter.
-7. Open `tiktacker.js`.
+7. Open `tiktakker.js`.
 8. Click **Raw**.
 9. Press `Ctrl + A`, then `Ctrl + C`.
 10. Paste the full script into the console.
@@ -74,7 +74,7 @@ allow pasting
 
 This tool is for educational purposes only.
 
-TikTok’s Terms of Service may prohibit automation. Tiktacker is a client-side script that simulates user actions at configurable speeds.
+TikTok’s Terms of Service may prohibit automation. tiktakker is a client-side script that simulates user actions at configurable speeds.
 
 Use responsibly and at your own risk.
 
