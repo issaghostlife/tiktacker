@@ -2,7 +2,6 @@
 
 > TikTok Unfollow Automation — Safe, configurable, one-click unfollow tool
 
-![Tiktacker Panel Preview](https://i.imgur.com/placeholder.png)
 
 ## Features
 
