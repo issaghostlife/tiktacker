@@ -1,6 +1,7 @@
-#<p align="center">
+<p align="center">
   <img src="assets/tiktakker-logo.png" alt="TikTakker Logo" width="900">
-</p> Tiktacker
+</p> 
+Tiktacker
 
 > TikTok Unfollow Automation — Safe, configurable, one-click unfollow tool
 
