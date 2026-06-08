@@ -1,4 +1,4 @@
-// ==UserScript==
+// ==UserScript== 
 // @name         Tiktacker
 // @namespace    http://tiktacker.io
 // @version      1.0.0
