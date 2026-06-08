@@ -25,4 +25,4 @@
 4. Paste the code as the URL
 5. Click the bookmark on any TikTok page to launch
 
-**Bookmarklet URL:**
+[![Install with Tampermonkey](https://img.shields.io/badge/Install%20with-Tampermonkey-00ad45)](https://github.com/issaghostlife/tiktacker/raw/main/tiktacker.js)
