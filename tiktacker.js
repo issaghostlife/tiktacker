@@ -1,9 +1,9 @@
 // ==UserScript== 
-// @name         Tiktacker
-// @namespace    http://tiktacker.io
+// @name         Tiktakker
+// @namespace    http://Tiktakker.io
 // @version      1.0.0
 // @description  TikTok Unfollow Automation — safe, configurable, one-click
-// @author       Tiktacker
+// @author       Tiktakker
 // @match        https://www.tiktok.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=tiktok.com
 // @grant        none
@@ -12,7 +12,7 @@
 (function() {
   'use strict';
 
-  const TIKTACKER_VERSION = '1.0.0';
+  const Tiktakker_VERSION = '1.0.0';
 
   const DEFAULTS = {
     maxUnfollows: 80,
@@ -44,15 +44,15 @@
 
   function saveSession() {
     try {
-      sessionStorage.setItem('tiktacker_state', JSON.stringify(state));
-      sessionStorage.setItem('tiktacker_config', JSON.stringify(config));
+      sessionStorage.setItem('Tiktakker_state', JSON.stringify(state));
+      sessionStorage.setItem('Tiktakker_config', JSON.stringify(config));
     } catch(e) {}
   }
 
   function loadSession() {
     try {
-      const s = sessionStorage.getItem('tiktacker_state');
-      const c = sessionStorage.getItem('tiktacker_config');
+      const s = sessionStorage.getItem('Tiktakker_state');
+      const c = sessionStorage.getItem('Tiktakker_config');
       if (s) state = JSON.parse(s);
       if (c) config = { ...DEFAULTS, ...JSON.parse(c) };
     } catch(e) {}
@@ -74,7 +74,7 @@
     return divs.sort((a, b) => b.scrollHeight - a.scrollHeight)[0] || null;
   }
 
-  async function tiktackerEngine(updateUI) {
+  async function TiktakkerEngine(updateUI) {
     state.startTime = state.startTime || Date.now();
 
     while (running && !stopped) {
@@ -162,7 +162,7 @@
   }
 
   function createPanel() {
-    const existing = document.getElementById('tiktacker-panel');
+    const existing = document.getElementById('Tiktakker-panel');
     if (existing) existing.remove();
 
     const dark = config.darkMode;
@@ -172,26 +172,26 @@
     const card = dark ? '#16213e' : '#f5f5f5';
 
     const panel = document.createElement('div');
-    panel.id = 'tiktacker-panel';
+    panel.id = 'Tiktakker-panel';
     panel.innerHTML = `
       <style>
-        #tiktacker-panel {
+        #Tiktakker-panel {
           position: fixed; top: 20px; right: 20px; z-index: 999999;
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
           width: 320px; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);
           background: ${bg}; color: ${text}; padding: 16px;
           user-select: none;
         }
-        #tiktacker-panel * { box-sizing: border-box; }
-        #tiktacker-header {
+        #Tiktakker-panel * { box-sizing: border-box; }
+        #Tiktakker-header {
           display: flex; justify-content: space-between; align-items: center;
           margin-bottom: 12px; cursor: move;
         }
-        #tiktacker-header h2 {
+        #Tiktakker-header h2 {
           margin: 0; font-size: 18px; font-weight: 700;
           color: ${accent}; letter-spacing: -0.5px;
         }
-        #tiktacker-header span { font-size: 11px; opacity: 0.5; }
+        #Tiktakker-header span { font-size: 11px; opacity: 0.5; }
         .tkt-row { display: flex; justify-content: space-between; align-items: center; margin: 4px 0; }
         .tkt-label { font-size: 12px; opacity: 0.8; }
         .tkt-value { font-size: 13px; font-weight: 600; }
@@ -227,9 +227,9 @@
         .tkt-collapsible summary { cursor: pointer; font-size: 12px; opacity: 0.6; }
         .tkt-collapsible[open] summary { margin-bottom: 6px; }
       </style>
-      <div id="tiktacker-header">
-        <h2>⏹ Tiktacker</h2>
-        <span>v${TIKTACKER_VERSION}</span>
+      <div id="Tiktakker-header">
+        <h2>⏹ Tiktakker</h2>
+        <span>v${Tiktakker_VERSION}</span>
       </div>
       <div class="tkt-row">
         <span class="tkt-label">Unfollowed</span>
@@ -280,7 +280,7 @@
     document.body.appendChild(panel);
 
     let isDragging = false, dragOffsetX, dragOffsetY;
-    const header = panel.querySelector('#tiktacker-header');
+    const header = panel.querySelector('#Tiktakker-header');
     header.addEventListener('mousedown', (e) => {
       isDragging = true;
       dragOffsetX = e.clientX - panel.getBoundingClientRect().left;
@@ -330,7 +330,7 @@
       }
     }
 
-    window.__tiktackerUI = updateUI;
+    window.__TiktakkerUI = updateUI;
 
     startBtn.addEventListener('click', async () => {
       config.maxUnfollows = parseInt(panel.querySelector('#cfg-max').value) || DEFAULTS.maxUnfollows;
@@ -350,7 +350,7 @@
       startBtn.textContent = '▶ Running';
 
       loadSession();
-      await tiktackerEngine(window.__tiktackerUI);
+      await TiktakkerEngine(window.__TiktakkerUI);
 
       startBtn.disabled = false;
       pauseBtn.disabled = true;
@@ -383,5 +383,5 @@
     createPanel();
   }
 
-  console.log('%c⏹ Tiktacker v' + TIKTACKER_VERSION + ' loaded', 'color: #ff0050; font-size: 16px; font-weight: bold;');
+  console.log('%c⏹ Tiktakker v' + Tiktakker_VERSION + ' loaded', 'color: #ff0050; font-size: 16px; font-weight: bold;');
 })();
